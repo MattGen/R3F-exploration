@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
+#root {
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  height: 100vh;
+  width: 100vw;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+#canvas-container {
+
+  height: 95vh;
+  width: 100vw;
+  background-color: '#333333';
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.NavBar
+{
+  flex-direction: row;
+  color: aquamarine;
+  height: fit-content;
+  max-width: 900;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.nbButton
+{
+  background-color: #727272;
+  color: rgb(201, 201, 201);
+  display: flex;
+  height: fit-content;
+  border-radius: 0;
+  margin-left: 5;
+  margin-right: 5;
 }
-
-@keyframes App-logo-spin {
+.nbButton:hover
+{
+  border-width: 0;
+  background-color: #777777;
+  color: rgb(176, 245, 112);
+  flex-basis: 1;
+  border-radius: 0;
+  margin-left: 5;
+  margin-right: 5;
+}
+.nbButton:focus-visible
+{
+  border-width: 2;
+  border-color: rbg(176,245,112);
+  background-color: #777777;
+  color: rgb(176, 245, 112);
+  flex-basis: 1;
+  border-radius: 0;
+  margin-left: 5;
+  margin-right: 5;
+}
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }
